@@ -1005,8 +1005,8 @@ export function getCriticalFoursVariants(
 
   // Create combinations with special suits.
   for (const suit of suitsToCreateVariantsFor) {
-    // A one of each suit in combination with this variant would be too difficult.
-    if (suit.oneOfEach === true) {
+    // 5 Suits with a one of each suit in combination with this variant would be too difficult.
+    if (suit.oneOfEach === true && numSuits === 5) {
       continue;
     }
 
